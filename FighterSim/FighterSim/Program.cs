@@ -10,11 +10,15 @@ namespace FighterSim
     {
         static void Main(string[] args)
         {
-            Fighter f1 = new Fighter(1);
+            List<Fighter> fighters = new List<Fighter>();
+
+            Fighter f1 = new Fighter(fighters, 1);
+            fighters.Add(f1);
 
             Console.WriteLine();
 
-            Fighter f2 = new Fighter(2);
+            Fighter f2 = new Fighter(fighters, 2);
+            fighters.Add(f2);
 
             Console.WriteLine("\nPress any key!");
             Console.ReadKey();

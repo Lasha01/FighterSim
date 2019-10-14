@@ -12,7 +12,7 @@ namespace FighterSim
         public string name;
         static Random rmd = new Random();
 
-            
+
         public int Attack()
         {
             int Dmg;
@@ -23,14 +23,14 @@ namespace FighterSim
             return Dmg;
         }
 
-        public void Hurt (int amount)
+        public void Hurt(int amount)
         {
             hp -= amount;
         }
 
         public bool IsAlive()
         {
-           
+
             return hp > 0;
         }
 
@@ -47,24 +47,34 @@ namespace FighterSim
 
         }
 
-        public Fighter(int fighter) //Får fram namnet på den som spelare, med restriktioner
+        public Fighter(List<Fighter> fighters, int fighter) //Får fram namnet på den som spelare, med restriktioner
         {
-            GiveName(fighter);
+            GiveName(fighters, fighter);
         }
 
-        void GiveName(int fighter)
+        void GiveName(List<Fighter> fighters, int fighter)
         {
-            Console.WriteLine("{0}. What's your fighters name?", fighter);
 
             bool success = true;
 
 
-            while (success != false)
+            while (success)
             {
+                Console.WriteLine("{0}. What's your fighters name?", fighter);
+
+                bool sameName = false;
 
                 name = Console.ReadLine();
                 name = name.Trim();
                 success = int.TryParse(name, out int wrongname);
+
+                for (int i = 0; i < fighters.Count; i++)
+                {
+                    if (name == fighters[i].name)
+                    {
+                        sameName = true;
+                    }
+                }
 
                 if (success == true)
                 {
@@ -77,11 +87,17 @@ namespace FighterSim
                     success = true;
 
                 }
+                else if (sameName)
+                {
+                    Console.WriteLine("You can't use the same name!");
+                    success = true;
+                }
                 else
-                {                    
+                {
                     Console.WriteLine("Your fighters name is " + name);
 
                 }
+
             }
         }
 

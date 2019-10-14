@@ -10,9 +10,15 @@ namespace FighterSim
     {
         static void Main(string[] args)
         {
-            Fighter f1 = new Fighter();
+            Fighter f1 = new Fighter(1);
 
-            Fighter f2 = new Fighter();
+            Console.WriteLine();
+
+            Fighter f2 = new Fighter(2);
+
+            Console.WriteLine("\nPress any key!");
+            Console.ReadKey();
+            Console.Clear();
 
             while (f1.IsAlive() && f2.IsAlive())
             {
@@ -28,9 +34,18 @@ namespace FighterSim
                 Console.WriteLine( f1.name + "'s hp is " + f1.GetHp());
 
                 Console.WriteLine("Press any button to continue...");
-                Console.ReadLine();
+                Console.ReadKey();
 
                 Console.Clear();
+
+                if (!f1.IsAlive())
+                {
+                    Console.WriteLine("Congratulations {0}!", f2.name);                    
+                }
+                else if (!f2.IsAlive())
+                {
+                    Console.WriteLine("Congratulations {0}!", f1.name);
+                }
             }
 
             Console.ReadLine();

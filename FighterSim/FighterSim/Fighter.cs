@@ -30,6 +30,7 @@ namespace FighterSim
 
         public bool IsAlive()
         {
+           
             return hp > 0;
         }
 
@@ -44,11 +45,19 @@ namespace FighterSim
         public Fighter() //Får fram namnet på den som spelare, med restriktioner
         {
 
-            Console.WriteLine(" What's your fighters name?");
+        }
 
+        public Fighter(int fighter) //Får fram namnet på den som spelare, med restriktioner
+        {
+            GiveName(fighter);
+        }
+
+        void GiveName(int fighter)
+        {
+            Console.WriteLine("{0}. What's your fighters name?", fighter);
 
             bool success = true;
-            
+
 
             while (success != false)
             {
@@ -69,7 +78,7 @@ namespace FighterSim
 
                 }
                 else
-                {
+                {                    
                     Console.WriteLine("Your fighters name is " + name);
 
                 }

@@ -1,25 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            List<Fighter> fighters = new List<Fighter>();
-
-            Fighter f1 = new Fighter(fighters, 1);
-            fighters.Add(f1);
-
-            Console.WriteLine();
-
-            Fighter f2 = new Fighter(fighters, 2);
-            fighters.Add(f2);
-
+           
             Console.WriteLine("\nPress any key!");
             Console.ReadKey();
             Console.Clear();
@@ -34,8 +22,8 @@ namespace FighterSim
 
                 f1.Hurt(dmg2);
 
-                Console.WriteLine( f2.name + "'s hp is " + f2.GetHp());
-                Console.WriteLine( f1.name + "'s hp is " + f1.GetHp());
+                Console.WriteLine(f2.name + "'s hp is " + f2.GetHp());
+                Console.WriteLine(f1.name + "'s hp is " + f1.GetHp());
 
                 Console.WriteLine("Press any button to continue...");
                 Console.ReadKey();
@@ -44,7 +32,7 @@ namespace FighterSim
 
                 if (!f1.IsAlive())
                 {
-                    Console.WriteLine("Congratulations {0}!", f2.name);                    
+                    Console.WriteLine("Congratulations {0}!", f2.name);
                 }
                 else if (!f2.IsAlive())
                 {
@@ -53,7 +41,6 @@ namespace FighterSim
             }
 
             Console.ReadLine();
-            
         }
     }
 }

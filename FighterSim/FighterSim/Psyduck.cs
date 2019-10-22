@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Psyduck
+    class Psyduck : Pokemon
     {
+        public Psyduck()
+        {
+            minDmg = 20;
+            maxDmg = 70;
+        }
+
+        public override int Attack()
+        {
+            return dmg;
+        }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Totodile : Pokemon
+    class Charmander : Pokemon
     {
-        public Totodile()
+        public Charmander()
         {
             minDmg = 20;
             maxDmg = 70;

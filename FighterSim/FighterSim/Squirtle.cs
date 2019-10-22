@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Squirtle
+    class Squirtle : Pokemon
     {
+        public Squirtle()
+        {
+            minDmg = 20;
+            maxDmg = 70;
+        }
+
+        public override int Attack()
+        {
+            return dmg;
+        }
     }
 }

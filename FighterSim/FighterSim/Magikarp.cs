@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RestSharp;
+using Newtonsoft.Json;
+using System;
 
 namespace FighterSim
 {
-    class Magikarp
+    class Magikarp : Pokemon
     {
+       
+       public Magikarp()
+        {
+            minDmg = 20;
+            maxDmg = 70;
+        }
+
+        public override int Attack()
+        {
+            return dmg;
+        }
     }
 }

@@ -1,22 +1,18 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 
 namespace FighterSim
 {
     abstract class Pokemon
     {
-        List<Pokemon> pokemons = new List<Pokemon>();
 
-        void AddPokemons()
-        {
-
-
-            pokemons.Add();
-        }
-
-        protected int hp = 200;
+        protected int hp;
         public string name;
         private static Random rmd = new Random();
+
+        public Stat[] stats;
+        protected int dmg = 0;
 
         protected int minDmg;
         protected int maxDmg;
@@ -42,14 +38,17 @@ namespace FighterSim
         public int GetHp()
         {
             return hp;
+        } 
+
+        public void UpdateStats()
+        {
+            for (int i = 0; i < stats.Length; i++)
+            {
+                if (stats[i].Name == "hp")
+                {
+                    hp = stats[i].base_stat;
+                }
+            }
         }
-
-
-        
-        public Pokemon() { }
-
-       
-           
-       
     }
 }

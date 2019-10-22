@@ -50,13 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deoxys.cs" />
+    <Compile Include="Charmander.cs" />
     <Compile Include="Pokemon.cs" />
     <Compile Include="Magikarp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Psyduck.cs" />
     <Compile Include="Squirtle.cs" />
+    <Compile Include="Stat.cs" />
+    <Compile Include="StatInfo.cs" />
     <Compile Include="Totodile.cs" />
   </ItemGroup>
   <ItemGroup>

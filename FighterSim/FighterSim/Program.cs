@@ -7,7 +7,7 @@ namespace FighterSim
 {
     class Program
     {
-        public List<Pokemon> pokemons = new List<Pokemon>();
+        public static List<Pokemon> pokemons = new List<Pokemon>();
 
         static void Start()
         {
@@ -16,35 +16,36 @@ namespace FighterSim
             RestRequest request = new RestRequest("pokemon/magikarp/");
             IRestResponse response = client.Get(request);
             Pokemon magikarp = JsonConvert.DeserializeObject<Magikarp>(response.Content);
-            //pokemons.Add(magikarp);
+            magikarp.UpdateStats(); 
+            pokemons.Add(magikarp);
 
             client = new RestClient("https://pokeapi.co/api/v2/");
             request = new RestRequest("pokemon/squirtle/");
             response = client.Get(request);
             Pokemon squirtle = JsonConvert.DeserializeObject<Magikarp>(response.Content);
             squirtle.UpdateStats();
-            //pokemons.Add(squirtle);
+            pokemons.Add(squirtle);
 
             client = new RestClient("https://pokeapi.co/api/v2/");
             request = new RestRequest("pokemon/psyduck/");
             response = client.Get(request);
             Pokemon psyduck = JsonConvert.DeserializeObject<Magikarp>(response.Content);
-            //pokemons.Add(psyduck);
+            psyduck.UpdateStats();
+            pokemons.Add(psyduck);
 
             client = new RestClient("https://pokeapi.co/api/v2/");
             request = new RestRequest("pokemon/charmander/");
             response = client.Get(request);
             Pokemon charmander = JsonConvert.DeserializeObject<Magikarp>(response.Content);
-            //pokemons.Add(charmander);
+            charmander.UpdateStats();
+            pokemons.Add(charmander);
 
             client = new RestClient("https://pokeapi.co/api/v2/");
             request = new RestRequest("pokemon/totodile/");     
             response = client.Get(request);
             Pokemon totodile = JsonConvert.DeserializeObject<Magikarp>(response.Content);
-
-            Console.WriteLine(totodile.stats[0].Name);
-
-            //pokemons.Add(totodile);
+            totodile.UpdateStats();
+            pokemons.Add(totodile);
         }
         private static void Main(string[] args)
         {

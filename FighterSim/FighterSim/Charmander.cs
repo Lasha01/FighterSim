@@ -8,6 +8,11 @@ namespace FighterSim
 {
     class Charmander : Pokemon
     {
+        public override string SetName()
+        {
+            string name = "Charmander";
+            return name;
+        }
         public Charmander()
         {
             minDmg = 20;

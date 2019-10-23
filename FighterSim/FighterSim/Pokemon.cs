@@ -8,7 +8,7 @@ namespace FighterSim
     {
 
         protected int hp;
-        public string name;
+        
         private static Random rmd = new Random();
 
         public Stat[] stats;
@@ -17,10 +17,15 @@ namespace FighterSim
         protected int minDmg;
         protected int maxDmg;
 
+        public virtual string SetName()
+        {
+            string name = "";
+            return name;
+        }
         public virtual int Attack()
         {
             int dmg = rmd.Next(minDmg, maxDmg);
-            Console.WriteLine(name + " dealt " + dmg + " damage");
+           Console.WriteLine(SetName() + " dealt " + dmg + " damage");
 
             return dmg;
         }

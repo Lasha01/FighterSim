@@ -8,8 +8,14 @@ namespace FighterSim
 {
     class Squirtle : Pokemon
     {
+        public override string SetName()
+        {
+            string name = "Squirtle";
+            return name;
+        }
         public Squirtle()
         {
+           
             minDmg = 20;
             maxDmg = 70;
         }

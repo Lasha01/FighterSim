@@ -6,9 +6,14 @@ namespace FighterSim
 {
     class Magikarp : Pokemon
     {
-       
-       public Magikarp()
+        public override string SetName()
         {
+            string name = "Magikarp";
+            return name;
+        }
+        public Magikarp()
+        {
+            
             minDmg = 20;
             maxDmg = 70;
         }

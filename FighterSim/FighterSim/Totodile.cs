@@ -8,6 +8,11 @@ namespace FighterSim
 {
     class Totodile : Pokemon
     {
+        public override string SetName()
+        {
+            string name = "Totodile";
+            return name;
+        }
         public Totodile()
         {
             minDmg = 20;

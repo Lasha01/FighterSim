@@ -13,9 +13,9 @@ namespace FighterSim
         }
         public Magikarp()
         {
-            
+            hp = 100;
             minDmg = 20;
-            maxDmg = 70;
+            maxDmg = 100;
         }
 
         public override int Attack()

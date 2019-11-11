@@ -15,8 +15,9 @@ namespace FighterSim
         }
         public Charmander()
         {
-            minDmg = 20;
-            maxDmg = 70;
+            hp = 120;
+            minDmg = 40;
+            maxDmg = 80;
         }
 
         public override int Attack()

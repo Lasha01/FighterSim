@@ -15,8 +15,9 @@ namespace FighterSim
         }
         public Totodile()
         {
-            minDmg = 20;
-            maxDmg = 70;
+            hp = 120;
+            minDmg = 25;
+            maxDmg = 90;
         }
 
         public override int Attack()

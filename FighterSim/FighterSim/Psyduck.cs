@@ -15,9 +15,9 @@ namespace FighterSim
         }
         public Psyduck()
         {
-            
-            minDmg = 20;
-            maxDmg = 70;
+            hp = 110;
+            minDmg = 25;
+            maxDmg = 75;
         }
 
         public override int Attack()

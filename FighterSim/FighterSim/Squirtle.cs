@@ -15,9 +15,9 @@ namespace FighterSim
         }
         public Squirtle()
         {
-           
-            minDmg = 20;
-            maxDmg = 70;
+            hp = 120;
+            minDmg = 30;
+            maxDmg = 80;
         }
 
         public override int Attack()

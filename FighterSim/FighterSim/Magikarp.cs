@@ -17,10 +17,5 @@ namespace FighterSim
             minDmg = 20;
             maxDmg = 100;
         }
-
-        public override int Attack()
-        {
-            return dmg;
-        }
     }
 }

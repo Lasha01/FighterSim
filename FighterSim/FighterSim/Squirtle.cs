@@ -15,9 +15,9 @@ namespace FighterSim
         }
         public Squirtle()
         {
-            hp = 120;
-            minDmg = 30;
-            maxDmg = 80;
+            
+            minDmg = 13;
+            maxDmg = 30;
         }        
     }
 }

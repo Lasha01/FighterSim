@@ -15,9 +15,9 @@ namespace FighterSim
         }
         public Charmander()
         {
-            hp = 120;
-            minDmg = 40;
-            maxDmg = 80;
+            
+            minDmg = 15;
+            maxDmg = 30;
         }
     }
 }

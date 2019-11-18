@@ -8,7 +8,7 @@ namespace FighterSim
 {
     class Stat
     {
-        public int base_stat = 0;
+        public int base_stat;
         public StatInfo stat;
 
         public string Name

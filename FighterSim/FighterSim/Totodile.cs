@@ -15,9 +15,10 @@ namespace FighterSim
         }
         public Totodile()
         {
-            hp = 120;
-            minDmg = 25;
-            maxDmg = 90;
+            
+            minDmg = 14;
+            maxDmg = 30;
+           
         }
     }
 }

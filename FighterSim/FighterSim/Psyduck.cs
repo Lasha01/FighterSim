@@ -15,9 +15,8 @@ namespace FighterSim
         }
         public Psyduck()
         {
-            hp = 110;
-            minDmg = 25;
-            maxDmg = 75;
+            minDmg = 7;
+            maxDmg = 26;
         }
     }
 }

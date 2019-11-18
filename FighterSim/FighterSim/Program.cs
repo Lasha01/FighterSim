@@ -52,6 +52,9 @@ namespace FighterSim
         {
             Start();
             Console.WriteLine("PokeKombat Simulator 4");
+            Console.ReadLine();
+            Console.Clear();
+
             int randomPokemon = rng.Next(pokemons.Count);
             int nextPokemon = rng.Next(pokemons.Count);
 
@@ -61,38 +64,39 @@ namespace FighterSim
             Pokemon p1 = pokemons[pokemon1];
             Console.Clear();
 
-            int pokemon2 = ChoosePokemon("Who do you want to play against? \nChoose between: ");
+            int pokemon2;
+
             while (true)
             {
+                pokemon2 = ChoosePokemon("Who do you want to play against? \nChoose between: ");
 
                 if (pokemon2 == pokemon1)
                 {
                     Console.WriteLine("Choose again!\nPress 'any key'!");
                     Console.ReadKey();
+
                     Console.Clear();
                 }
-                else
-                {
-
-                    break;
-                }
+                else break;
             }
+            Console.Clear();
             Pokemon p2 = pokemons[pokemon2];
 
             Console.CursorVisible = true;
-            int y = 0;
-
+            
 
             while (p1.IsAlive() && p2.IsAlive())
             {
 
-                Console.WriteLine(y);
-                
-                p2.Hurt(p1.Attack());
-                p1.Hurt(p2.Attack());
 
                 Console.WriteLine(p1.SetName() + "'s hp is " + p1.GetHp());
                 Console.WriteLine(p2.SetName() + "'s hp is " + p2.GetHp());
+
+                Console.WriteLine("Press any Key to continue...");
+                Console.ReadLine();
+
+                p2.Hurt(p1.Attack());
+                p1.Hurt(p2.Attack());
 
                 if (!p1.IsAlive() && !p2.IsAlive())
                 {

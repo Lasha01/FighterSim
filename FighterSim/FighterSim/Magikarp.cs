@@ -13,9 +13,8 @@ namespace FighterSim
         }
         public Magikarp()
         {
-            hp = 100;
-            minDmg = 20;
-            maxDmg = 100;
+            minDmg = 1;
+            maxDmg = 40;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace FighterSim
         public int base_stat;
         public StatInfo stat;
 
-        public string Name
+        public string Name //Metod som hittar en stat med en specifik namn från API
         {
             get
             {

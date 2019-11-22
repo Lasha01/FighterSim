@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Totodile : Pokemon
+    class Totodile : Pokemon   //Totodile är ärv av Pokeomón
     {
-        public override string SetName()
+        public override string SetName() //bestämmer namnet på pokemonen
         {
             string name = "Totodile";
             return name;
         }
-        public Totodile()
+        public Totodile() //Bestämmer vilken skada pokemonen ska göra
         {
             
             minDmg = 14;

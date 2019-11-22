@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class StatInfo
+    class StatInfo 
     {
-        public string name;
+        public string name; 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Charmander : Pokemon
+    class Charmander : Fire
     {
         public override string SetName()
         {

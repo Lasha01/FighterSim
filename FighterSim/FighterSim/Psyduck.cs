@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Psyduck : Pokemon
+    class Psyduck : Water
     {
         public override string SetName()
         {

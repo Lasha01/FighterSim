@@ -6,7 +6,7 @@ namespace FighterSim
 {
     abstract class Pokemon
     {
-
+        protected string type; 
         protected int hp;
         
         private static Random rmd = new Random(); //skapar en random generator
@@ -21,6 +21,11 @@ namespace FighterSim
         {
             string name = "";
             return name;
+        }
+        public string GetType() //metoden som används för att bestämma och returnera namnet på en specifik pokemon
+        {
+          
+            return type;
         }
         public int Attack() //En metod som slumpar ett tal beroende på vilken pokeomn och sedan returnerar talet som skada
         {

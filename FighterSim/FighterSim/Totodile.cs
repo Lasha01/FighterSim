@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FighterSim
 {
-    class Totodile : Pokemon   //Totodile är ärv av Pokeomón
+    class Totodile : Water   //Totodile är ärv av Pokeomón
     {
         public override string SetName() //bestämmer namnet på pokemonen
         {

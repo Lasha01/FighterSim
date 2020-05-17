@@ -4,7 +4,7 @@ using System;
 
 namespace FighterSim
 {
-    class Magikarp : Pokemon
+    class Magikarp : Water 
     {
         public override string SetName()
         {

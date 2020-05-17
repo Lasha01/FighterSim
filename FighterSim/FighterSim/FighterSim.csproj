@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arena.cs" />
     <Compile Include="Charmander.cs" />
+    <Compile Include="Fire.cs" />
     <Compile Include="Pokemon.cs" />
     <Compile Include="Magikarp.cs" />
     <Compile Include="Program.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="Stat.cs" />
     <Compile Include="StatInfo.cs" />
     <Compile Include="Totodile.cs" />
+    <Compile Include="Water.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
